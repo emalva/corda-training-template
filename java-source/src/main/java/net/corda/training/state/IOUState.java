@@ -20,6 +20,12 @@ import javax.validation.constraints.NotNull;
  */
 public class IOUState implements ContractState {
 
+    private Amount amount;
+
+    private Party lender;
+
+    private Party borrower;
+
     public IOUState() {}
 
     /**
@@ -31,4 +37,28 @@ public class IOUState implements ContractState {
         return ImmutableList.of();
     }
 
+
+    public Amount getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Amount amount) {
+        this.amount = amount;
+    }
+
+    public Party getLender() {
+        return lender;
+    }
+
+    public void setLender(Party lender) {
+        this.lender = lender;
+    }
+
+    public Party getBorrower() {
+        return borrower;
+    }
+
+    public void setBorrower(Party borrower) {
+        this.borrower = borrower;
+    }
 }
